@@ -1,14 +1,139 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neymar</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .slider {
+      margin-bottom: 20px;
+    }
+
+    .slider img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .slick-dots {
+      display: flex !important;
+      justify-content: center;
+      margin: 15px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .slick-dots li {
+      position: relative;
+      margin: 0 5px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .slick-dots li button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background-color: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .slick-dots li button:before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      display: block;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .slick-dots li.slick-active button {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .slick-dots li.slick-active button:before {
+      opacity: 1;
+    }
+
+    .slick-prev,
+    .slick-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: #ffffff;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .slick-prev:hover,
+    .slick-next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .slick-prev {
+      left: 10px;
+    }
+
+    .slick-next {
+      right: 10px;
+    }
+  </style>
 </head>
 <body>
-    <h1>BOOTSTRAP</h1>
-    <p>LOGO</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png" alt="bootstrap">
+  <div class="container">
+    <h1>Neymar</h1>
+    <div class="slider">
+      <img src="https://s2-ge.glbimg.com/ECJ8BNGGzY9IaF3rU2vkfUzQZPA=/0x0:1024x683/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/q/0/q29ebATuO96HLBWGxviw/gettyimages-1258356324.jpg" alt="Neymar Photo 1">
+      <img src="https://tntsports.com.br/__export/1670064893301/sites/esporteinterativo/img/2022/11/25/neymar-selexo.png_433171058.png" alt="Neymar Photo 2">
+      <img src="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt8c7aa6c5a0afc85a/6393a8eddfefeb58a12e848d/Neymar_Brazil_WC_2022.jpg?auto=webp&format=pjpg&width=3840&quality=60" alt="Neymar Photo 3">
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script>
+    $('.slider').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">&lt;</button>',
+      nextArrow: '<button class="slick-next" aria-label="Next" type="button">&gt;</button>',
+    });
+  </script>
 </body>
 </html>
